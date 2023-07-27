@@ -29,9 +29,9 @@
                 font-size: 16px;
                 font-weight: normal;
             }
-            thead tr, thead th {
+            /*thead tr, thead th {
                 background-color: #ccc !important;
-            }
+            }*/
         </style>
         <script type="text/javascript">
 
@@ -40,35 +40,38 @@
         </script>
     </head>
     <body>
-        <main id="main-content" class="container">
-            <section>
+        <main id="main-content">
+            <div class="container">
                 <div class="myclass">
                     <span>unfuck</span><span>yourself</span>
                     <br/>
                     <span>earth</span>
                     <p>we are all just floating around on this spinning rock trying to make connections</p>
                 </div>
-                <table class="mt-4 table table-bordered table-hover" border="0">
-                    <thead> 
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Address</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Aimee Morris</td>
-                            <td>thetwintigers@gmail.com</td>
-                            <td>110 Windsor Creek Drive, Alpharetta, GA 30022</td>
-                        </tr>
-                        <tr>
-                            <td>Tim Morris</td>
-                            <td>bethatway@gmail.com</td>
-                            <td>11180 Amy Frances Ln, Alpharetta, GA 30022</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="mt-4 table-responsive">
+                    <table class="table table-bordered table-hover" border="0">
+                        <caption>List of Users</caption>
+                        <thead class="table-dark"> 
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Aimee Morris</td>
+                                <td>thetwintigers@gmail.com</td>
+                                <td>110 Windsor Creek Drive, Alpharetta, GA 30022</td>
+                            </tr>
+                            <tr>
+                                <td>Tim Morris</td>
+                                <td>bethatway@gmail.com</td>
+                                <td>11180 Amy Frances Ln, Alpharetta, GA 30022</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="mt-4">
                     <form>
                         <div class="row">
@@ -87,7 +90,7 @@
                         </div>
                     </form>
                 </div>
-            </section>
+            </div>
         </main>
     </body>
 </html>
