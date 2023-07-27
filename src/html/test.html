@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>sandbox</title>
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css"/>
         <style>
             body {
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -13,7 +14,8 @@
                 font-size: 32px;
                 color: #fff;
                 font-weight: 900;
-                margin: 25px 50px;
+                /*margin: 25px 50px;*/
+                margin-top:25px;
                 padding: 15px;
                 border: 1px solid #000;
                 border-radius: 4px;
@@ -28,11 +30,13 @@
                 font-size: 16px;
                 font-weight: normal;
             }
-            #main-content {
+            /*#main-content {
                 padding: 50px;
-            }
+            }*/
             table {
-                margin: 25px 50px;
+                /*margin: 25px 50px;
+                margin-top:25px;*/
+
                 border: 1.0px solid #000;
                 border-collapse: collapse;
             }
@@ -43,30 +47,67 @@
                 padding: 10px;
                 border: 1.0px solid #000;
             }
+            
         </style>
+        <script type="text/javascript">
+
+            //alert("hello world");
+
+        </script>
     </head>
     <body>
-        <main id="main-content">
-            <div class="myclass">
-                <span>unfuck</span><span>yourself</span>
-                <br/>
-                <span>earth</span>
-                <p>we are all just floating around on this spinning rock trying to make connections</p>
-            </div>
-            <table border="0">
-                <thead> 
-                    <tr>
-                        <th>it</th>
-                        <th>gets</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>better</td>
-                        <td>maybe</td>
-                    </tr>
-                </tbody>
-            </table>
+        <main id="main-content" class="container">
+            <section>
+                <div class="myclass">
+                    <span>unfuck</span><span>yourself</span>
+                    <br/>
+                    <span>earth</span>
+                    <p>we are all just floating around on this spinning rock trying to make connections</p>
+                </div>
+                <table class="mt-4" border="0">
+            
+                    <thead> 
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aimee Morris</td>
+                            <td>thetwintigers@gmail.com</td>
+                            <td>110 Windsor Creek Drive, Alpharetta, GA 30022</td>
+                        </tr>
+                        <tr>
+                            <td>Tim Morris</td>
+                            <td>bethatway@gmail.com</td>
+                            <td>11180 Amy Frances Ln, Alpharetta, GA 30022</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt-4">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <input class="form-control" type="text" id="firstname" placeholder="First Name"/>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <input class="form-control" type="password" id="password" placeholder="Password" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <button type="button" class="btn btn-primary">submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </main>
     </body>
 </html>
