@@ -1,30 +1,35 @@
-$(function() {
+let people = [
+    {
+        name: 'Aimee Morris',
+        email: 'thetwintigers@gmail.com',
+        address: '110 Windsor Creek Drive, Alpharetta, GA 30022'
+    },
+    {
+        name: 'Tim Morris',
+        email: 'bethatway@gmail.com',
+        address: '11180 Amy Frances Ln, Johns Creek, GA 30022'
+    }
+];
 
-    var people = [
-        {
-            name: 'Aimee Morris',
-            email: 'thetwintigers@gmail.com',
-            address: '110 Windsor Creek Drive, Alpharetta, GA 30022'
-        },
-        {
-            name: 'Tim Morris',
-            email: 'bethatway@gmail.com',
-            address: '11180 Amy Frances Ln, Johns Creek, GA 30022'
-        }
-    ];
-
+const appendToTable = (person) => {
     var table = $('#users tbody');
+    var tr = table.append('<tr>');
+    tr.append('<td>' + person.name + '</td><td>' + person.email + '</td><td>' + person.address + '</td>');
+};
 
-    const appendToTable = (person) => {
-        var tr = table.append('<tr>');
-        tr.append('<td>' + person.name + '</td><td>' + person.email + '</td><td>' + person.address + '</td>');
-    };
+const populate = () => {
+    people.map((person) => {
+        appendToTable(person);
+    });
+};
 
-    const populate = () => {
-        people.map((person) => {
-            appendToTable(person);
-        });
-    };
+const reset = () => {
+    $('#name').val('');
+    $('#email').val('');
+    $('#address').val('');
+};
+
+$(function() {
 
     populate();
 
@@ -38,6 +43,7 @@ $(function() {
             address: addressValue
         };
         appendToTable(person);
+        reset();
     });
 
 });
