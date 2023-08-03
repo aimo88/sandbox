@@ -1,3 +1,7 @@
+let $name = $('#name');
+let $email = $('#email');
+let $address = $('#address');
+
 let people = [
     {
         name: 'Aimee Morris',
@@ -24,9 +28,9 @@ const populate = () => {
 };
 
 const reset = () => {
-    $('#name').val('');
-    $('#email').val('');
-    $('#address').val('');
+    $name.val('');
+    $email.val('');
+    $address.val('');
 };
 
 $(function() {
@@ -34,9 +38,9 @@ $(function() {
     populate();
 
     $('#add').on('click', function() {
-        var nameValue = $('#name').val();
-        var emailValue = $('#email').val();
-        var addressValue = $('#address').val();
+        var nameValue = $name.val();
+        var emailValue = $email.val();
+        var addressValue = $address.val();
         var person = {
             name: nameValue,
             email: emailValue,
