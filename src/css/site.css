@@ -1,7 +1,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-/*  this represents any element 
+/*  this represents any element
     with a class of "myclass" */
 .myclass {
     font-size: 32px;
@@ -25,3 +25,7 @@ body {
 /*thead tr, thead th {
     background-color: #ccc !important;
 }*/
+
+td {
+    padding: 5px;
+}
