@@ -2,6 +2,10 @@ let $name = $('#name');
 let $email = $('#email');
 let $address = $('#address');
 
+/*
+https://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
+*/
+
 let people = [
     {
         name: 'Aimee Morris',
