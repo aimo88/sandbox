@@ -25,6 +25,10 @@ body {
 /*thead tr, thead th {
     background-color: #ccc !important;
 }*/
+h2 {
+    color:red;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
 
 td {
     padding: 5px;
