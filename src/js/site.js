@@ -2,10 +2,6 @@ let $name = $('#name');
 let $email = $('#email');
 let $address = $('#address');
 
-/*
-https://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
-*/
-
 let people = [
     {
         name: 'Aimee Morris',
@@ -42,13 +38,13 @@ $(function() {
     populate();
 
     $('#add').on('click', function() {
-        var nameValue = $name.val();
-        var emailValue = $email.val();
-        var addressValue = $address.val();
+        var nameVal = $name.val();
+        var emailVal = $email.val();
+        var addressVal = $address.val();
         var person = {
-            name: nameValue,
-            email: emailValue,
-            address: addressValue
+            name: nameVal,
+            email: emailVal,
+            address: addressVal
         };
         appendToTable(person);
         reset();
