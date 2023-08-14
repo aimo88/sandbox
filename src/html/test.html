@@ -30,19 +30,28 @@
                     </table>
                 </div>
                 <div class="mt-4">
-                    <form>
+                    <form class="g-3 needs-validation" novalidate>
                         <div class="row">
                             <div class="col-md-3">
-                                <input class="form-control" type="text" id="name" placeholder="Name"/>
+                                <input class="form-control" type="text" id="name" placeholder="Name" required />
+                                <div class="invalid-feedback">
+                                    Please choose a Name.
+                                </div>
                             </div>
                             <div class="col-md-3">
-                                <input class="form-control" type="text" id="email" placeholder="Email" />
+                                <input class="form-control" type="text" id="email" placeholder="Email" required />
+                                <div class="invalid-feedback">
+                                    Please choose a Email.
+                                </div>
                             </div>
                             <div class="col-md-4">
-                                <input class="form-control" type="text" id="address" placeholder="Address" />
+                                <input class="form-control" type="text" id="address" placeholder="Address" required />
+                                <div class="invalid-feedback">
+                                    Please choose a Address.
+                                </div>
                             </div>
                             <div class="col-md-2">
-                                <button id="add" type="button" class="btn btn-primary">Add</button>
+                                <button id="add" type="submit" class="btn btn-primary">Add</button>
                             </div>
                         </div>
                     </form>
@@ -70,6 +79,6 @@
                 </div>
             </div>
         </main>
-        <script src="../js/site.min.js"></script>
+        <script src="../js/site.js"></script>
     </body>
 </html>

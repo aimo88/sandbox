@@ -33,21 +33,48 @@ const reset = () => {
     $address.val('');
 };
 
+const addPerson = () => {
+    var person = {
+        name: $name.val(),
+        email: $email.val(),
+        address: $address.val()
+    };
+    appendToTable(person);
+    //reset();
+};
+
 $(function() {
 
     populate();
 
-    $('#add').on('click', function() {
-        var nameVal = $name.val();
-        var emailVal = $email.val();
-        var addressVal = $address.val();
-        var person = {
-            name: nameVal,
-            email: emailVal,
-            address: addressVal
-        };
-        appendToTable(person);
-        reset();
+    /*
+    $('form').on('submit', function(e) {
+
+        e.preventDefault();
+        addPerson();
+
+    });
+    */
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            else {
+                addPerson();
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+
+        }, false);
     });
 
 });
