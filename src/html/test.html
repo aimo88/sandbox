@@ -8,8 +8,8 @@
     </head>
     <body>
         <main id="main-content">
-            <div class="container">
-                <div class="myclass">
+            <div class="container-fluid">
+                <div class="myclass mx-auto d-block">
                     <span>Aimo</span><span>Dot</span>
                     <br/>
                     <span>Com</span>
@@ -30,19 +30,28 @@
                     </table>
                 </div>
                 <div class="mt-4">
-                    <form>
+                    <form class="g-3 needs-validation" novalidate>
                         <div class="row">
                             <div class="col-md-3">
-                                <input class="form-control" type="text" id="name" placeholder="Name"/>
+                                <input class="form-control" type="text" id="name" placeholder="Name" required />
+                                <div class="invalid-feedback">
+                                    Please choose a Name.
+                                </div>
                             </div>
                             <div class="col-md-3">
-                                <input class="form-control" type="text" id="email" placeholder="Email" />
+                                <input class="form-control" type="text" id="email" placeholder="Email" required />
+                                <div class="invalid-feedback">
+                                    Please choose a Email.
+                                </div>
                             </div>
                             <div class="col-md-4">
-                                <input class="form-control" type="text" id="address" placeholder="Address" />
+                                <input class="form-control" type="text" id="address" placeholder="Address" required />
+                                <div class="invalid-feedback">
+                                    Please choose a Address.
+                                </div>
                             </div>
                             <div class="col-md-2">
-                                <button id="add" type="button" class="btn btn-primary">Add</button>
+                                <button id="add" type="submit" class="btn btn-primary">Add</button>
                             </div>
                         </div>
                     </form>
@@ -65,9 +74,11 @@
                     <h5>All the Women I Have Loved</h5>
                 </div>
                 <div class="mt-4">
-                    <img src="https://media.npr.org/assets/img/2023/08/01/gettyimages-997812474_custom-6080dcb4c48321dd41693db7d822c58526595eb2-s1100-c50.jpg" style="width:300px;" title="Sinead O'Connor"/>
+                    <img src="https://media.npr.org/assets/img/2023/08/01/gettyimages-997812474_custom-6080dcb4c48321dd41693db7d822c58526595eb2-s1100-c50.jpg" 
+                        class="img-fluid rounded float-start" alt="Sinead O'Connor"/>
+                </div>
             </div>
         </main>
-        <script src="../js/site.min.js"></script>
+        <script src="../js/site.js"></script>
     </body>
 </html>
