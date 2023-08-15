@@ -32,25 +32,28 @@
                 <div class="mt-4">
                     <form class="g-3 needs-validation" novalidate>
                         <div class="row">
-                            <div class="col-md-3">
-                                <input class="form-control" type="text" id="name" placeholder="Name" required />
+                            <div class="col-md-4">
+                                <label for="name" class="form-label">Name</label>
+                                <input class="form-control" type="text" id="name" required />
                                 <div class="invalid-feedback">
-                                    Please choose a Name.
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <input class="form-control" type="text" id="email" placeholder="Email" required />
-                                <div class="invalid-feedback">
-                                    Please choose a Email.
+                                    Please provide a Name.
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <input class="form-control" type="text" id="address" placeholder="Address" required />
+                                <label for="email" class="form-label">Email</label>
+                                <input class="form-control" type="text" id="email" required />
                                 <div class="invalid-feedback">
-                                    Please choose a Address.
+                                    Please provide an Email.
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-4">
+                                <label for="address" class="form-label">Address</label>
+                                <input class="form-control" type="text" id="address" required />
+                                <div class="invalid-feedback">
+                                    Please provide an Address.
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2">
                                 <button id="add" type="submit" class="btn btn-primary">Add</button>
                             </div>
                         </div>
