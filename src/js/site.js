@@ -28,9 +28,9 @@ const populate = () => {
 };
 
 const reset = () => {
-    $name.val('');
-    $email.val('');
-    $address.val('');
+    $name.val(null);
+    $email.val(null);
+    $address.val(null);
 };
 
 const addPerson = () => {
@@ -62,19 +62,17 @@ $(function() {
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
+            event.preventDefault();
+            event.stopPropagation();
+
             if (!form.checkValidity()) {
                 form.reportValidity();
-                event.preventDefault();
-                event.stopPropagation();
             }
             else {
-                addPerson();
-                event.preventDefault();
-                event.stopPropagation();
+                addPerson(event);
             }
             form.classList.add('was-validated');
 
         }, false);
     });
-
 });
